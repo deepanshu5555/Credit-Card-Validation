@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+    <title>Credit Card Validation</title>
+</head>
+<body>
+        <form method="POST" action="http://127.0.0.1:5000/result" class="px-5 py-5 mx-auto">
+            <div class="container px-5 py-5 mx-auto">
+                <div class="card card0">
+                    <div class="d-flex flex-lg-row flex-column-reverse">
+                        <div class="card card1">
+                            <div class="row justify-content-center my-auto">
+                                <div class="col-md-8 col-10 my-5">
+                                    <div class="row justify-content-center px-3 mb-3"> <img id="logo" src="{{ url_for('static', filename='creditCardLogos.jpg') }}"> </div>
+                                    <h3 class="mb-5 text-center heading">Credit Card Validation</h3>
+                                    <div class="form-group"> <label class="form-control-label text-muted">Enter Your 16 digit Credit Card Number</label> <input type="text" required minlength="16" maxlength="16" id="CreditCardNumber" placeholder="676283509877XXXX" name="CreditCardNumber" class="form-control"> </div>
+                                    <div class="row justify-content-center my-3 px-3"> <button type="submit" class="btn-block btn-color">SUBMIT</button> </div>
+                                </div>
+                            </div>
+                        </div>     
+                        <div class="card card2">
+                            <div class="my-auto">
+                                <img id="gif" src="{{ url_for('static', filename='giphy.gif') }}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>  
+</body>
+</html>
